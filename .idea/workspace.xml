@@ -22,7 +22,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/doc" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -31,11 +31,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\Xx-hH\TechnicalArea\Github\Project\oahgnaix.GitHub.io" />
       <recent name="G:\Xx-hH\TechnicalArea\Github\Project\oahgnaix.GitHub.io\doc" />
       <recent name="G:\Xx-hH\TechnicalArea\Github\Project\oahgnaix.GitHub.io\img" />
       <recent name="G:\Xx-hH\TechnicalArea\Github\Project\oahgnaix.GitHub.io\js" />
       <recent name="G:\Xx-hH\TechnicalArea\Github\Project\oahgnaix.GitHub.io\css" />
-      <recent name="G:\Xx-hH\TechnicalArea\Github\Project\oahgnaix.GitHub.io\html" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
@@ -47,7 +47,7 @@
       <option name="presentableId" value="Default" />
       <updated>1649980140675</updated>
       <workItem from="1649980142050" duration="1550000" />
-      <workItem from="1649996566901" duration="4531000" />
+      <workItem from="1649996566901" duration="5001000" />
     </task>
     <servers />
   </component>
