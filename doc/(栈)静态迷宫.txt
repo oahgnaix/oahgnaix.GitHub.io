@@ -291,7 +291,7 @@ void color(short x) {
     color(4);  	printf("红色\n");
     color(5);  	printf("紫色\n");
     color(11); 	printf("黄色\n");
-    color(15);  	printf("白色\n");
+    color(15);  printf("白色\n");
     color(8);  	printf("灰色\n");
     color(9); 	printf("淡蓝色\n");
     color(10); 	printf("淡绿色\n");
