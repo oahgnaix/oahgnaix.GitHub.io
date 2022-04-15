@@ -22,3 +22,29 @@ h1 {
     margin-top: 30%;
     font-weight: normal;
 }
+
+.footer-wrapper {
+    /* 相对定位 相对自己的位置 */
+    position: relative;
+    top: 50px;
+    width: 180px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-wrapper a {
+    text-decoration: none;
+    color: #00AFF0;
+}
+
+.footer-wrapper a:hover {
+    color: #2ecd5f;
+}
+
+.footer-wrapper a:active {
+    color: #fefefe;
+}
+
+.footer-wrapper span {
+    color: red;
+}
