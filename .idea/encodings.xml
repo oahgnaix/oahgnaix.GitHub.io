@@ -4,8 +4,8 @@
     <file url="file://$PROJECT_DIR$/css/index.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/css/navigation.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/doc/(栈)动态迷宫.txt" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/doc/(栈)动态迷宫.txt" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/doc/(栈)静态迷宫.txt" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/doc/(队列)静态迷宫.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/doc/(栈)动态迷宫.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/doc/(栈)静态迷宫.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/doc/(队列)静态迷宫.txt" charset="UTF-8" />
   </component>
 </project>

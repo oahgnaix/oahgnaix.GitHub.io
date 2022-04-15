@@ -1,4 +1,4 @@
-// 2020240013 ÏòºÀ ´óÊı¾İ201
+// 2020240013 å‘è±ª å¤§æ•°æ®201
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -8,70 +8,70 @@
 #define MAXSIZE 1000
 #define ROW 15
 #define LINE 15
-#define RATIO 0.6875 // 44/64µÄ±ÈÀı
-#define DFDIR -1 // ·½ÏòÄ¬ÈÏ Öµ
-#define PASS 0 // Í¨Â·
-#define WALL 1 // Ç½
-#define ENTRY 2 // Èë¿Ú
-#define EXIT 3 // ³ö¿Ú
-#define WALK 4 // ×ß¹ı
-#define DEAD 5 // ËÀÂ·
+#define RATIO 0.6875 // 44/64çš„æ¯”ä¾‹
+#define DFDIR -1 // æ–¹å‘é»˜è®¤ å€¼
+#define PASS 0 // é€šè·¯
+#define WALL 1 // å¢™
+#define ENTRY 2 // å…¥å£
+#define EXIT 3 // å‡ºå£
+#define WALK 4 // èµ°è¿‡
+#define DEAD 5 // æ­»è·¯
 
 typedef struct {
     int x;
     int y;
-    int dir; // ·½Ïò
+    int dir; // æ–¹å‘
 } Node;
 typedef struct {
     int top;
     Node *data;
 } SqStack;
 
-void Map(int map[][LINE]); // Éú³ÉµØÍ¼
+void Map(int map[][LINE]); // ç”Ÿæˆåœ°å›¾
 
-void KnuthShuffle(int map[], int length); // Ï´ÅÆËã·¨
+void KnuthShuffle(int map[], int length); // æ´—ç‰Œç®—æ³•
 
-void swapInt(int *a, int *b); // ¸¨ÖúÏ´ÅÆËã·¨ ½»»»
+void swapInt(int *a, int *b); // è¾…åŠ©æ´—ç‰Œç®—æ³• äº¤æ¢
 
-void PrintMap(int map[][LINE]); // ´òÓ¡ÃÔ¹¬µØÍ¼
+void PrintMap(int map[][LINE]); // æ‰“å°è¿·å®«åœ°å›¾
 
-boolean InitStack(SqStack *stack); // ³õÊ¼»¯
+boolean InitStack(SqStack *stack); // åˆå§‹åŒ–
 
-void Walk(SqStack *stack, int in_x, int in_y, int map[][LINE]); // ÒÆ¶¯ÃÔ¹¬
+void Walk(SqStack *stack, int in_x, int in_y, int map[][LINE]); // ç§»åŠ¨è¿·å®«
 
-boolean Push(SqStack *stack, Node node); // Ñ¹Õ»
+boolean Push(SqStack *stack, Node node); // å‹æ ˆ
 
-boolean IsFull(SqStack *stack); // ÅĞÕ»Âú
+boolean IsFull(SqStack *stack); // åˆ¤æ ˆæ»¡
 
-boolean IsEmpty(SqStack *stack); // ÅĞÕ»¿Õ
+boolean IsEmpty(SqStack *stack); // åˆ¤æ ˆç©º
 
-Node GetTop(SqStack *stack); // È¡Õ»¶¥ÔªËØ
+Node GetTop(SqStack *stack); // å–æ ˆé¡¶å…ƒç´ 
 
-void Pop(SqStack *stack); // ³öÕ» (ÕâÀïÓÃvoidÊÇÒÔÏÂ´úÂëÖĞ±£Ö¤ÎŞĞèÅĞ¶Ï)
+void Pop(SqStack *stack); // å‡ºæ ˆ (è¿™é‡Œç”¨voidæ˜¯ä»¥ä¸‹ä»£ç ä¸­ä¿è¯æ— éœ€åˆ¤æ–­)
 
-void color(short x); // ×Ô¶¨Òåº¯¸ù¾İ²ÎÊı¸Ä±äÑÕÉ«
+void color(short x); // è‡ªå®šä¹‰å‡½æ ¹æ®å‚æ•°æ”¹å˜é¢œè‰²
 
 
 /**
- * <h2>Ë³ĞòÕ»ÊµÑé</h2>
- * <h3>Ëæ»úÃÔ¹¬ÎÊÌâ</h3>
- * <h3>×¢Òâ£ºÇëÔÚDos´°¿ÚÏÂÔËĞĞ</h3>
+ * <h2>é¡ºåºæ ˆå®éªŒ</h2>
+ * <h3>éšæœºè¿·å®«é—®é¢˜</h3>
+ * <h3>æ³¨æ„ï¼šè¯·åœ¨Dosçª—å£ä¸‹è¿è¡Œ</h3>
  * @return 0
  */
 int main() {
 
     color(1);
-    printf("  Ê¹ÓÃË³ĞòÕ»½â¾öÃÔ¹¬Í¨Â·ÎÊÌâ \n");
+    printf("  ä½¿ç”¨é¡ºåºæ ˆè§£å†³è¿·å®«é€šè·¯é—®é¢˜ \n");
     color(15);
     printf("==============================\n");
     color(4);
-    printf("£Ø--×ß¹ıµÄÎŞĞ§Í¨Â·");
+    printf("ï¼¸--èµ°è¿‡çš„æ— æ•ˆé€šè·¯");
     color(9);
-    printf("  Çô--Æğµã\n");
+    printf("  å›š--èµ·ç‚¹\n");
     color(13);
-    printf("£Ï--×ß¹ıµÄÓĞĞ§Í¨Â·");
+    printf("ï¼¯--èµ°è¿‡çš„æœ‰æ•ˆé€šè·¯");
     color(11);
-    printf("  ¿Ú--ÖÕµã\n");
+    printf("  å£--ç»ˆç‚¹\n");
     color(15);
     printf("------------------------------\n");
 
@@ -82,7 +82,7 @@ int main() {
 
     SqStack stack;
     if (!(InitStack(&stack))) {
-        printf("Ë³ĞòÕ»³õÊ¼»¯Ê§°Ü~~\n");
+        printf("é¡ºåºæ ˆåˆå§‹åŒ–å¤±è´¥~~\n");
         return 0;
     }
 
@@ -105,7 +105,7 @@ int main() {
 }
 
 void Map(int map[][LINE]) {
-    int length = (ROW - 2) * (LINE - 2); // 8 * 8 ÄÚÇøÓò
+    int length = (ROW - 2) * (LINE - 2); // 8 * 8 å†…åŒºåŸŸ
     int randArr[length];
     for (int i = 0; i < length; i++) {
         if (i == 0) {
@@ -118,11 +118,11 @@ void Map(int map[][LINE]) {
             randArr[i] = WALL;
         }
     }
-    KnuthShuffle(randArr, length); // ´òÂÒ ÄÚÇøÓò
-    // ¸³ÖµÕûÕÅµØÍ¼
+    KnuthShuffle(randArr, length); // æ‰“ä¹± å†…åŒºåŸŸ
+    // èµ‹å€¼æ•´å¼ åœ°å›¾
     for (int i = 0; i < ROW; i++) {
         for (int j = 0; j < LINE; j++) {
-            // ÕâÀïÒ»¸öĞ¡¼¼ÇÉ£ºÖ»ÒªÇ°ÃæËÄ¸ö±í´ïÊ½Ò»¸öÎª¼Ù£¬ËµÃ÷Î´µ½±ß½ç¸³Öµ£¬±£Ö¤Length²»»áÔ½½ç
+            // è¿™é‡Œä¸€ä¸ªå°æŠ€å·§ï¼šåªè¦å‰é¢å››ä¸ªè¡¨è¾¾å¼ä¸€ä¸ªä¸ºå‡ï¼Œè¯´æ˜æœªåˆ°è¾¹ç•Œèµ‹å€¼ï¼Œä¿è¯Lengthä¸ä¼šè¶Šç•Œ
             if (i != 0 && i != ROW - 1 && j != 0 && j != LINE - 1 && length--) {
                 map[i][j] = randArr[length];
             } else {
@@ -150,27 +150,27 @@ void PrintMap(int map[][LINE]) {
         for (int j = 0; j < LINE; j++) {
             switch (map[i][j]) {
                 case PASS:
-                    printf("¡¡");
+                    printf("ã€€");
                     break;
                 case WALL:
                     color(10);
-                    printf("Î§");
+                    printf("å›´");
                     break;
                 case ENTRY:
                     color(9);
-                    printf("Çô");
+                    printf("å›š");
                     break;
                 case EXIT:
                     color(11);
-                    printf("¿Ú");
+                    printf("å£");
                     break;
                 case WALK:
                     color(13);
-                    printf("£Ï");
+                    printf("ï¼¯");
                     break;
                 case DEAD:
                     color(4);
-                    printf("£Ø");
+                    printf("ï¼¸");
                     break;
             }
         }
@@ -188,66 +188,66 @@ boolean InitStack(SqStack *stack) {
 }
 
 void Walk(SqStack *stack, int in_x, int in_y, int map[][LINE]) {
-    // ÆğµãÏÈÈëÕ»£¬ÎªºóĞøÑ­»·×öÆÌµæ
-    Node node; // Éú³Éµ±Ç°Î»ÖÃ(Æğµã)
+    // èµ·ç‚¹å…ˆå…¥æ ˆï¼Œä¸ºåç»­å¾ªç¯åšé“ºå«
+    Node node; // ç”Ÿæˆå½“å‰ä½ç½®(èµ·ç‚¹)
     node.x = in_x;
     node.y = in_y;
     node.dir = DFDIR;
-    // ÎŞ·½Ïò
-    Push(stack, node); // ÆğµãÈëÕ»
+    // æ— æ–¹å‘
+    Push(stack, node); // èµ·ç‚¹å…¥æ ˆ
 
-    while (!(IsEmpty(stack))) { // ÎŞÂ·¿É×ßµÄÇé¿ö£¬»Øµ½Æğµã
-        node = GetTop(stack); // È¡³öµ±Ç°Î»ÖÃ
-        if (map[node.x][node.y] == EXIT) { // ÅĞ¶Ïµ±Ç°Î»ÖÃÊÇ·ñÊÇÖÕµã
-            PrintMap(map); // µ½ÖÕµã£¬´òÓ¡Â·¾¶µØÍ¼
+    while (!(IsEmpty(stack))) { // æ— è·¯å¯èµ°çš„æƒ…å†µï¼Œå›åˆ°èµ·ç‚¹
+        node = GetTop(stack); // å–å‡ºå½“å‰ä½ç½®
+        if (map[node.x][node.y] == EXIT) { // åˆ¤æ–­å½“å‰ä½ç½®æ˜¯å¦æ˜¯ç»ˆç‚¹
+            PrintMap(map); // åˆ°ç»ˆç‚¹ï¼Œæ‰“å°è·¯å¾„åœ°å›¾
             break;
-        } else { // Èç¹û²»ÊÇÖÕµã£¬¼ÌĞø×ß
+        } else { // å¦‚æœä¸æ˜¯ç»ˆç‚¹ï¼Œç»§ç»­èµ°
             int i, j, k;
-            for (i = node.dir + 1; i < 4; i++) { // ÅĞ¶Ïµ±Ç°Î»ÖÃ¸÷¸ö·½ÏòÊÇ·ñ¿É×ß
+            for (i = node.dir + 1; i < 4; i++) { // åˆ¤æ–­å½“å‰ä½ç½®å„ä¸ªæ–¹å‘æ˜¯å¦å¯èµ°
                 switch (i) {
-                    case 0: // ÉÏ
+                    case 0: // ä¸Š
                         j = node.x - 1;
                         k = node.y;
                         break;
-                    case 1: // ÓÒ
+                    case 1: // å³
                         j = node.x;
                         k = node.y + 1;
                         break;
-                    case 2: // ÏÂ
+                    case 2: // ä¸‹
                         j = node.x + 1;
                         k = node.y;
                         break;
-                    case 3: // ×ó
+                    case 3: // å·¦
                         j = node.x;
                         k = node.y - 1;
                         break;
                 }
-                if (map[j][k] == PASS || map[j][k] == EXIT) { // ÅĞ¶ÏÕâ¸ö·½Ïò ÊÇ·ñ¿É×ß
-                    Node tNode; // Éú³ÉÏÂÒ»¸öÎ»ÖÃ
+                if (map[j][k] == PASS || map[j][k] == EXIT) { // åˆ¤æ–­è¿™ä¸ªæ–¹å‘ æ˜¯å¦å¯èµ°
+                    Node tNode; // ç”Ÿæˆä¸‹ä¸€ä¸ªä½ç½®
                     tNode.x = j;
                     tNode.y = k;
                     tNode.dir = DFDIR;
 
-                    stack->data[stack->top - 1].dir = i; // ¼ÇÂ¼µ±Ç°Î»ÖÃĞĞ×ß·½Ïò
-                    Push(stack, tNode); // ÏÂÒ»¸öÎ»ÖÃÈëÕ»
+                    stack->data[stack->top - 1].dir = i; // è®°å½•å½“å‰ä½ç½®è¡Œèµ°æ–¹å‘
+                    Push(stack, tNode); // ä¸‹ä¸€ä¸ªä½ç½®å…¥æ ˆ
                     if (map[j][k] == PASS) {
-                        map[j][k] = WALK; // ¼ÇÎª×ß¹ı
+                        map[j][k] = WALK; // è®°ä¸ºèµ°è¿‡
                     }
-                    break; // ÍË³öÕâ¸öÎ»ÖÃµÄ·½Ïò²éÕÒÑ­»·
+                    break; // é€€å‡ºè¿™ä¸ªä½ç½®çš„æ–¹å‘æŸ¥æ‰¾å¾ªç¯
                 }
             }
-            if (i == 4) { // ËÄ¸ö·½Ïò¶¼ÅĞ¶ÏÍê£¬µ«ÊÇ×ß²»Í¨
-                if (!(map[node.x][node.y] == ENTRY)) { // ±£Ö¤Æğµã²»±»ÖÃÎªENTRY
-                    map[node.x][node.y] = DEAD; // °Ñµ±Ç°Î»ÖÃ£¬¼ÇÎªËÀÂ·
+            if (i == 4) { // å››ä¸ªæ–¹å‘éƒ½åˆ¤æ–­å®Œï¼Œä½†æ˜¯èµ°ä¸é€š
+                if (!(map[node.x][node.y] == ENTRY)) { // ä¿è¯èµ·ç‚¹ä¸è¢«ç½®ä¸ºENTRY
+                    map[node.x][node.y] = DEAD; // æŠŠå½“å‰ä½ç½®ï¼Œè®°ä¸ºæ­»è·¯
                 }
-                Pop(stack); // µ±Ç°Î»ÖÃ³öÕ»
+                Pop(stack); // å½“å‰ä½ç½®å‡ºæ ˆ
             }
         }
     }
     if (IsEmpty(stack)) {
         PrintMap(map);
         color(12);
-        printf("\tÎŞÂ·¿É×ß£¬ËÀÇÌÇÌÁË~~\n");
+        printf("\tæ— è·¯å¯èµ°ï¼Œæ­»ç¿˜ç¿˜äº†~~\n");
     }
 }
 
@@ -276,30 +276,30 @@ void Pop(SqStack *stack) {
 }
 
 void color(short x) {
-    if (x >= 0 && x <= 15) { // ²ÎÊıÔÚ0-15µÄ·¶Î§ÑÕÉ«
-        SetConsoleTextAttribute( // µ÷ÓÃÉèÖÃ¿ØÖÆÌ¨ÎÄ±¾ÊôĞÔº¯Êı(µ÷ÓÃ»ñÈ¡¾ä±úº¯Êı(²»Àí½â), ²»Àí½â)
-                GetStdHandle(STD_OUTPUT_HANDLE), x);    // Ö»ÓĞÒ»¸ö²ÎÊı£¬¸Ä±ä×ÖÌåÑÕÉ«
-    } else { // Ä¬ÈÏµÄÑÕÉ«°×É«
+    if (x >= 0 && x <= 15) { // å‚æ•°åœ¨0-15çš„èŒƒå›´é¢œè‰²
+        SetConsoleTextAttribute( // è°ƒç”¨è®¾ç½®æ§åˆ¶å°æ–‡æœ¬å±æ€§å‡½æ•°(è°ƒç”¨è·å–å¥æŸ„å‡½æ•°(ä¸ç†è§£), ä¸ç†è§£)
+                GetStdHandle(STD_OUTPUT_HANDLE), x);    // åªæœ‰ä¸€ä¸ªå‚æ•°ï¼Œæ”¹å˜å­—ä½“é¢œè‰²
+    } else { // é»˜è®¤çš„é¢œè‰²ç™½è‰²
         SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
     }
     /*
-    ½âÎöÒ»²¨£º
-    color(0);	printf("ºÚÉ«\n");
-    color(9); 	printf("À¶É«\n");
-    color(2); 	printf("ÂÌÉ«\n");
-    color(3); 	printf("ºşÀ¶É«\n");
-    color(4);  	printf("ºìÉ«\n");
-    color(5);  	printf("×ÏÉ«\n");
-    color(11); 	printf("»ÆÉ«\n");
-    color(15);  	printf("°×É«\n");
-    color(8);  	printf("»ÒÉ«\n");
-    color(9); 	printf("µ­À¶É«\n");
-    color(10); 	printf("µ­ÂÌÉ«\n");
-    color(11); 	printf("µ­Ç³ÂÌÉ«\n");
-    color(12);  printf("µ­ºìÉ«\n");
-    color(11); 	printf("µ­×ÏÉ«\n");
-    color(11); 	printf("µ­»ÆÉ«\n");
-    color(15); 	printf("ÁÁ°×É«\n");
-    color(16);    // ÒòÎªÕâÀï´óÓÚ15£¬»Ö¸´Ä¬ÈÏµÄÑÕÉ«
+    è§£æä¸€æ³¢ï¼š
+    color(0);	printf("é»‘è‰²\n");
+    color(9); 	printf("è“è‰²\n");
+    color(2); 	printf("ç»¿è‰²\n");
+    color(3); 	printf("æ¹–è“è‰²\n");
+    color(4);  	printf("çº¢è‰²\n");
+    color(5);  	printf("ç´«è‰²\n");
+    color(11); 	printf("é»„è‰²\n");
+    color(15);  	printf("ç™½è‰²\n");
+    color(8);  	printf("ç°è‰²\n");
+    color(9); 	printf("æ·¡è“è‰²\n");
+    color(10); 	printf("æ·¡ç»¿è‰²\n");
+    color(11); 	printf("æ·¡æµ…ç»¿è‰²\n");
+    color(12);  printf("æ·¡çº¢è‰²\n");
+    color(11); 	printf("æ·¡ç´«è‰²\n");
+    color(11); 	printf("æ·¡é»„è‰²\n");
+    color(15); 	printf("äº®ç™½è‰²\n");
+    color(16);    // å› ä¸ºè¿™é‡Œå¤§äº15ï¼Œæ¢å¤é»˜è®¤çš„é¢œè‰²
      */
 }

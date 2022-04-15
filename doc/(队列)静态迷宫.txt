@@ -5,19 +5,19 @@
 #define MAXSIZE 1000
 #define ROW 8
 #define LINE 8
-#define RATIO 0.6875 // 44/64µÄ±ÈÀı
-#define COORDINATE -1 // ×ø±êÄ¬ÈÏ Öµ
-#define PASS 0 // Í¨Â·
-#define WALL 1 // Ç½
-#define ENTRY 2 // Èë¿Ú
-#define EXIT 3 // ³ö¿Ú
-#define WALK 4 // ×ß¹ı
-#define DEAD 5 // ËÀÂ·
+#define RATIO 0.6875 // 44/64çš„æ¯”ä¾‹
+#define COORDINATE -1 // åæ ‡é»˜è®¤ å€¼
+#define PASS 0 // é€šè·¯
+#define WALL 1 // å¢™
+#define ENTRY 2 // å…¥å£
+#define EXIT 3 // å‡ºå£
+#define WALK 4 // èµ°è¿‡
+#define DEAD 5 // æ­»è·¯
 
 typedef struct Box {
-    int x;           // µãµÄºá×ø±ê£¨ĞĞ£©
-    int y;           // µãµÄ×İ×ø±ê£¨ÁĞ£©
-    int pre;         // ÉÏÒ»¸öµãµÄÏÂ±ê
+    int x;           // ç‚¹çš„æ¨ªåæ ‡ï¼ˆè¡Œï¼‰
+    int y;           // ç‚¹çš„çºµåæ ‡ï¼ˆåˆ—ï¼‰
+    int pre;         // ä¸Šä¸€ä¸ªç‚¹çš„ä¸‹æ ‡
 } Box;
 
 typedef struct {
@@ -26,51 +26,51 @@ typedef struct {
     int rear;
 } SqQueue;
 
-void Map(int map[][LINE]); // Éú³ÉµØÍ¼
+void Map(int map[][LINE]); // ç”Ÿæˆåœ°å›¾
 
-void KnuthShuffle(int map[], int length); // Ï´ÅÆËã·¨
+void KnuthShuffle(int map[], int length); // æ´—ç‰Œç®—æ³•
 
-void swapInt(int *a, int *b); // ¸¨ÖúÏ´ÅÆËã·¨ ½»»»
+void swapInt(int *a, int *b); // è¾…åŠ©æ´—ç‰Œç®—æ³• äº¤æ¢
 
-void PrintMap(int map[][LINE]); // ´òÓ¡ÃÔ¹¬µØÍ¼
+void PrintMap(int map[][LINE]); // æ‰“å°è¿·å®«åœ°å›¾
 
-boolean InitQueue(SqQueue *queue); // Ñ­»·¶ÓÁĞµÄ³õÊ¼»¯
+boolean InitQueue(SqQueue *queue); // å¾ªç¯é˜Ÿåˆ—çš„åˆå§‹åŒ–
 
-void Walk(SqQueue *queue, int in_x, int in_y, int map[][LINE]); // ÒÆ¶¯ÃÔ¹¬
+void Walk(SqQueue *queue, int in_x, int in_y, int map[][LINE]); // ç§»åŠ¨è¿·å®«
 
-boolean EnQueue(SqQueue *queue, Box node); // Ñ­»·¶ÓÁĞÈë¶ÓÁĞ
+boolean EnQueue(SqQueue *queue, Box node); // å¾ªç¯é˜Ÿåˆ—å…¥é˜Ÿåˆ—
 
-boolean IsFull(SqQueue *queue); // ÅĞ¶ÓÂú
+boolean IsFull(SqQueue *queue); // åˆ¤é˜Ÿæ»¡
 
-boolean IsEmpty(SqQueue *queue); // ÅĞ¶Ó¿Õ
+boolean IsEmpty(SqQueue *queue); // åˆ¤é˜Ÿç©º
 
-Box DeQueue(SqQueue *queue); // Ñ­»·¶ÓÁĞ³ö¶ÓÁĞ
+Box DeQueue(SqQueue *queue); // å¾ªç¯é˜Ÿåˆ—å‡ºé˜Ÿåˆ—
 
-void ShowPath(SqQueue *queue, int end, int map[][LINE]); // Çó½â×î¶ÌÂ·¾¶
+void ShowPath(SqQueue *queue, int end, int map[][LINE]); // æ±‚è§£æœ€çŸ­è·¯å¾„
 
-void Color(short x); // ×Ô¶¨Òåº¯¸ù¾İ²ÎÊı¸Ä±äÑÕÉ«
+void Color(short x); // è‡ªå®šä¹‰å‡½æ ¹æ®å‚æ•°æ”¹å˜é¢œè‰²
 
 /**
- * <h2>Ë³Ğò¶ÓÁĞÊµÑé</h2>
- * <h3>Ëæ»úÃÔ¹¬ÎÊÌâ</h3>
- * <h3>×¢Òâ£ºÇëÔÚDos´°¿ÚÏÂÔËĞĞ</h3>
- * <h4>·ÇÑ­»·¶ÓÁĞ£¬²¢²»ÊÇÕæµÄÍË³ö¶ÓÁĞ</h4>
+ * <h2>é¡ºåºé˜Ÿåˆ—å®éªŒ</h2>
+ * <h3>éšæœºè¿·å®«é—®é¢˜</h3>
+ * <h3>æ³¨æ„ï¼šè¯·åœ¨Dosçª—å£ä¸‹è¿è¡Œ</h3>
+ * <h4>éå¾ªç¯é˜Ÿåˆ—ï¼Œå¹¶ä¸æ˜¯çœŸçš„é€€å‡ºé˜Ÿåˆ—</h4>
  * @return 0
  */
 int main() {
 
     Color(1);
-    printf("  Ê¹ÓÃ¶ÓÁĞ½â¾öÃÔ¹¬Í¨Â·ÎÊÌâ \n");
+    printf("  ä½¿ç”¨é˜Ÿåˆ—è§£å†³è¿·å®«é€šè·¯é—®é¢˜ \n");
     Color(15);
     printf("==============================\n");
     Color(4);
-    printf("£Ø--×ß¹ıµÄÎŞĞ§Í¨Â·");
+    printf("ï¼¸--èµ°è¿‡çš„æ— æ•ˆé€šè·¯");
     Color(9);
-    printf("  Çô--Æğµã\n");
+    printf("  å›š--èµ·ç‚¹\n");
     Color(13);
-    printf("£Ï--×ß¹ıµÄÓĞĞ§Í¨Â·");
+    printf("ï¼¯--èµ°è¿‡çš„æœ‰æ•ˆé€šè·¯");
     Color(11);
-    printf("  ¿Ú--ÖÕµã\n");
+    printf("  å£--ç»ˆç‚¹\n");
     Color(15);
     printf("------------------------------\n");
 
@@ -81,7 +81,7 @@ int main() {
 
     SqQueue queue;
     if (!(InitQueue(&queue))) {
-        printf("Ë³Ğò¶ÓÁĞ³õÊ¼»¯Ê§°Ü~~\n");
+        printf("é¡ºåºé˜Ÿåˆ—åˆå§‹åŒ–å¤±è´¥~~\n");
         return 0;
     }
 
@@ -104,7 +104,7 @@ int main() {
 }
 
 void Map(int map[][LINE]) {
-    int length = (ROW - 2) * (LINE - 2); // 8 * 8 ÄÚÇøÓò
+    int length = (ROW - 2) * (LINE - 2); // 8 * 8 å†…åŒºåŸŸ
     int randArr[length];
     for (int i = 0; i < length; i++) {
         if (i == 0) {
@@ -117,11 +117,11 @@ void Map(int map[][LINE]) {
             randArr[i] = WALL;
         }
     }
-    KnuthShuffle(randArr, length); // ´òÂÒ ÄÚÇøÓò
-    // ¸³ÖµÕûÕÅµØÍ¼
+    KnuthShuffle(randArr, length); // æ‰“ä¹± å†…åŒºåŸŸ
+    // èµ‹å€¼æ•´å¼ åœ°å›¾
     for (int i = 0; i < ROW; i++) {
         for (int j = 0; j < LINE; j++) {
-            // ÕâÀïÒ»¸öĞ¡¼¼ÇÉ£ºÖ»ÒªÇ°ÃæËÄ¸ö±í´ïÊ½Ò»¸öÎª¼Ù£¬ËµÃ÷Î´µ½±ß½ç¸³Öµ£¬±£Ö¤Length²»»áÔ½½ç
+            // è¿™é‡Œä¸€ä¸ªå°æŠ€å·§ï¼šåªè¦å‰é¢å››ä¸ªè¡¨è¾¾å¼ä¸€ä¸ªä¸ºå‡ï¼Œè¯´æ˜æœªåˆ°è¾¹ç•Œèµ‹å€¼ï¼Œä¿è¯Lengthä¸ä¼šè¶Šç•Œ
             if (i != 0 && i != ROW - 1 && j != 0 && j != LINE - 1 && length--) {
                 map[i][j] = randArr[length];
             } else {
@@ -149,27 +149,27 @@ void PrintMap(int map[][LINE]) {
         for (int j = 0; j < LINE; j++) {
             switch (map[i][j]) {
                 case PASS:
-                    printf("¡¡");
+                    printf("ã€€");
                     break;
                 case WALL:
                     Color(10);
-                    printf("Î§");
+                    printf("å›´");
                     break;
                 case ENTRY:
                     Color(9);
-                    printf("Çô");
+                    printf("å›š");
                     break;
                 case EXIT:
                     Color(11);
-                    printf("¿Ú");
+                    printf("å£");
                     break;
                 case WALK:
                     Color(13);
-                    printf("£Ï");
+                    printf("ï¼¯");
                     break;
                 case DEAD:
                     Color(4);
-                    printf("£Ø");
+                    printf("ï¼¸");
                     break;
             }
         }
@@ -187,25 +187,25 @@ boolean InitQueue(SqQueue *queue) {
 }
 
 void Walk(SqQueue *queue, int in_x, int in_y, int map[][LINE]) {
-    // ÆğµãÏÈÈë¶ÓÁĞ
-    Box node; // Éú³Éµ±Ç°Î»ÖÃ(Æğµã)
+    // èµ·ç‚¹å…ˆå…¥é˜Ÿåˆ—
+    Box node; // ç”Ÿæˆå½“å‰ä½ç½®(èµ·ç‚¹)
     node.x = in_x;
     node.y = in_y;
-    node.pre = COORDINATE; // ÆğµãÎ»ÖÃÏÂ±ê -1
+    node.pre = COORDINATE; // èµ·ç‚¹ä½ç½®ä¸‹æ ‡ -1
 
-    EnQueue(queue, node); // ÆğµãÈë¶ÓÁĞ
+    EnQueue(queue, node); // èµ·ç‚¹å…¥é˜Ÿåˆ—
 
-    while (!(IsEmpty(queue))) { // ÎŞÂ·¿É×ßµÄÇé¿ö£¬»Øµ½Æğµã
-        node = DeQueue(queue); // È¡³ö¶ÓÍ·Î»ÖÃ ¶ÓÍ·Ö¸Õëfront++
+    while (!(IsEmpty(queue))) { // æ— è·¯å¯èµ°çš„æƒ…å†µï¼Œå›åˆ°èµ·ç‚¹
+        node = DeQueue(queue); // å–å‡ºé˜Ÿå¤´ä½ç½® é˜Ÿå¤´æŒ‡é’ˆfront++
 
-        if (map[node.x][node.y] == EXIT) { // ÅĞ¶Ïµ±Ç°Î»ÖÃÊÇ·ñÊÇÖÕµã
+        if (map[node.x][node.y] == EXIT) { // åˆ¤æ–­å½“å‰ä½ç½®æ˜¯å¦æ˜¯ç»ˆç‚¹
             ShowPath(queue, queue->front, map);
             PrintMap(map);
             return;
         }
-        int dir; // ×°·½Ïò
-        Box tNode; // Éú³ÉÏÂÒ»¸öÎ»ÖÃ
-        for (dir = 0; dir < 4; dir++) { // ÅĞ¶Ïµ±Ç°Î»ÖÃ¸÷¸ö·½ÏòÊÇ·ñ¿É×ß
+        int dir; // è£…æ–¹å‘
+        Box tNode; // ç”Ÿæˆä¸‹ä¸€ä¸ªä½ç½®
+        for (dir = 0; dir < 4; dir++) { // åˆ¤æ–­å½“å‰ä½ç½®å„ä¸ªæ–¹å‘æ˜¯å¦å¯èµ°
             switch (dir) {
                 case 0:
                     tNode.x = node.x - 1;
@@ -224,11 +224,11 @@ void Walk(SqQueue *queue, int in_x, int in_y, int map[][LINE]) {
                     tNode.y = node.y - 1;
                     break;
             }
-            if (map[tNode.x][tNode.y] == PASS || map[tNode.x][tNode.y] == EXIT) { // ÅĞ¶ÏÕâ¸ö·½Ïò ÊÇ·ñ¿É×ß
-                tNode.pre = queue->front - 1; // °Ñ½ÚµãÎ»ÖÃµÄÏÂ±ê¸ø ĞÂÎ»ÖÃ
+            if (map[tNode.x][tNode.y] == PASS || map[tNode.x][tNode.y] == EXIT) { // åˆ¤æ–­è¿™ä¸ªæ–¹å‘ æ˜¯å¦å¯èµ°
+                tNode.pre = queue->front - 1; // æŠŠèŠ‚ç‚¹ä½ç½®çš„ä¸‹æ ‡ç»™ æ–°ä½ç½®
                 EnQueue(queue, tNode);
                 if (map[tNode.x][tNode.y] == PASS) {
-                    map[tNode.x][tNode.y] = DEAD; // ½«ÏÂÒ»¸öÎ»ÖÃÖÃÎªËÀÂ·£¨¼´×ß¹ı£©
+                    map[tNode.x][tNode.y] = DEAD; // å°†ä¸‹ä¸€ä¸ªä½ç½®ç½®ä¸ºæ­»è·¯ï¼ˆå³èµ°è¿‡ï¼‰
                 }
             }
         }
@@ -236,7 +236,7 @@ void Walk(SqQueue *queue, int in_x, int in_y, int map[][LINE]) {
     if (IsEmpty(queue) && map[node.x][node.y] != EXIT) {
         PrintMap(map);
         Color(12);
-        printf("\tÎŞÂ·¿É×ß£¬ËÀÇÌÇÌÁË~~\n");
+        printf("\tæ— è·¯å¯èµ°ï¼Œæ­»ç¿˜ç¿˜äº†~~\n");
     }
 }
 
@@ -244,13 +244,13 @@ boolean EnQueue(SqQueue *queue, Box node) {
     if (IsFull(queue)) {
         return FALSE;
     }
-    queue->base[queue->rear] = node; // ĞÂÔªËØ²åÈë¶ÓÎ²
-    queue->rear = queue->rear + 1; // ¶ÓÎ²Ö¸Õë¼Ó 1
+    queue->base[queue->rear] = node; // æ–°å…ƒç´ æ’å…¥é˜Ÿå°¾
+    queue->rear = queue->rear + 1; // é˜Ÿå°¾æŒ‡é’ˆåŠ  1
     return TRUE;
 }
 
 boolean IsFull(SqQueue *queue) {
-    return queue->rear + 1 == queue->front; // ·ÇÑ­»·¶ÓÁĞ
+    return queue->rear + 1 == queue->front; // éå¾ªç¯é˜Ÿåˆ—
 }
 
 boolean IsEmpty(SqQueue *queue) {
@@ -258,7 +258,7 @@ boolean IsEmpty(SqQueue *queue) {
 }
 
 Box DeQueue(SqQueue *queue) {
-    return queue->base[queue->front++]; // È¡³ö¶ÓÍ·ÔªËØ£¬²¢°ÑÆä³ö¶ÓÁĞ
+    return queue->base[queue->front++]; // å–å‡ºé˜Ÿå¤´å…ƒç´ ï¼Œå¹¶æŠŠå…¶å‡ºé˜Ÿåˆ—
 }
 
 void ShowPath(SqQueue *queue, int end, int map[][LINE]) {
@@ -277,10 +277,10 @@ void ShowPath(SqQueue *queue, int end, int map[][LINE]) {
 }
 
 void Color(short x) {
-    if (x >= 0 && x <= 15) { // ²ÎÊıÔÚ0-15µÄ·¶Î§ÑÕÉ«
-        SetConsoleTextAttribute( // µ÷ÓÃÉèÖÃ¿ØÖÆÌ¨ÎÄ±¾ÊôĞÔº¯Êı(µ÷ÓÃ»ñÈ¡¾ä±úº¯Êı(²»Àí½â), ²»Àí½â)
-                GetStdHandle(STD_OUTPUT_HANDLE), x);    // Ö»ÓĞÒ»¸ö²ÎÊı£¬¸Ä±ä×ÖÌåÑÕÉ«
-    } else { // Ä¬ÈÏµÄÑÕÉ«°×É«
+    if (x >= 0 && x <= 15) { // å‚æ•°åœ¨0-15çš„èŒƒå›´é¢œè‰²
+        SetConsoleTextAttribute( // è°ƒç”¨è®¾ç½®æ§åˆ¶å°æ–‡æœ¬å±æ€§å‡½æ•°(è°ƒç”¨è·å–å¥æŸ„å‡½æ•°(ä¸ç†è§£), ä¸ç†è§£)
+                GetStdHandle(STD_OUTPUT_HANDLE), x);    // åªæœ‰ä¸€ä¸ªå‚æ•°ï¼Œæ”¹å˜å­—ä½“é¢œè‰²
+    } else { // é»˜è®¤çš„é¢œè‰²ç™½è‰²
         SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
     }
 }
