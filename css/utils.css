@@ -1,0 +1,159 @@
+/* 清除浏览器默认边距 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("../img/bac.webp");
+}
+
+.header {
+    width: 1380px;
+    margin: 0 auto;
+    height: 100px;
+    padding: 30px;
+    text-align: center;
+}
+
+.main {
+    width: 1440px;
+    height: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.content {
+    width: 80%;
+    height: 500px;
+    margin: 20px auto;
+}
+
+.content th {
+    border: #f8040c solid 3px;
+    border-radius: 10px;
+    color: #f50632;
+}
+
+.content td {
+    font-size: small;
+}
+
+.content a {
+    text-decoration: none;
+}
+
+.content th:hover {
+    background-color: #00AFF0;
+}
+
+.content td:hover {
+    background-color: #00AFF0;
+    font-size: medium;
+}
+
+/* class(类)选择器 */
+.cartoon {
+    /* 宽度:300(px 单位 像素); */
+    width: 760px;
+    /* 高度 200px */
+    height: 240px;
+    /* 上下 左右(自动相等) */
+    margin: 150px auto 250px;
+    /* 背景颜色 颜色值(颜色单词)
+    background-color:aquamarine; */
+}
+
+.west {
+    /* 浮动(横排) left向左(从左至右) */
+    float: left;
+    /* 百分比是参考当前这个元素的父元素计算的 */
+    width: 25%;
+    height: 100%;
+    /* 背景重复 不重复 */
+    background-repeat: no-repeat;
+    /* 背景位置 y方向 居中 */
+    background-position-y: center;
+}
+
+.west1 {
+    /* 背景图片 url图片路径 */
+    background-image: url("../img/west_01.png");
+    /* 播放动画 动画名称 时间 脚步(8) 循环 */
+    animation: swk 1.4s steps(8) infinite;
+    /* 整个动画走1600px 走8步 每一步200px 这200px是瞬间到达的 */
+}
+
+.west2 {
+    background-image: url("../img/west_02.png");
+    animation: zbj 1.4s steps(8) infinite;
+}
+
+.west3 {
+    background-image: url("../img/west_03.png");
+    animation: ts 1.4s steps(8) infinite;
+}
+
+.west4 {
+    background-image: url("../img/west_04.png");
+    animation: ss 1.4s steps(8) infinite;
+}
+
+/* 关键帧(画面) 动画名称(自定义) */
+@keyframes swk {
+    /* 动画开始的画面 */
+    0% {
+        /* 背景位置 x方向 -1600px */
+        background-position-x: 0;
+    }
+    /* 结束 */
+    100% {
+        background-position-x: -1600px;
+    }
+}
+
+@keyframes zbj {
+    /* 动画开始的画面 */
+    0% {
+        /* 背景位置 x方向 -1600px */
+        background-position-x: 0;
+    }
+    /* 结束 */
+    100% {
+        background-position-x: -1600px;
+    }
+}
+
+@keyframes ts {
+    /* 动画开始的画面 */
+    0% {
+        /* 背景位置 x方向 -1600px */
+        background-position-x: 0;
+    }
+    /* 结束 */
+    100% {
+        background-position-x: -1360px;
+    }
+}
+
+@keyframes ss {
+    /* 动画开始的画面 */
+    0% {
+        /* 背景位置 x方向 -1600px */
+        background-position-x: 0;
+    }
+    /* 结束 */
+    100% {
+        background-position-x: -1680px;
+    }
+}
+
+/*
+    CSS3动画 -> 关键的画面 开始0px   结束-1600px
+    传统动画 -> 动画片 动态效果 -> 由很多张静止连续的画面连续播放
+ */
+
+.footer {
+    padding: 20px;
+    text-align: center;
+}
