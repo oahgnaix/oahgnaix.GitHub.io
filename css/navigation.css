@@ -14,6 +14,7 @@ ul {
     border-bottom: none;
     border-top-left-radius: 5px; /* 边框圆角 半径 */
     border-top-right-radius: 5px;
+    background: #031318;
 }
 
 .nav_down li {
