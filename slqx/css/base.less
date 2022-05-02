@@ -1,0 +1,33 @@
+@total-width: 768px;
+
+// vw适配
+html {
+  // 设置rem的比值
+  font-size: (100vw/@total-width * 40);
+  background-color: #eff0f4;
+}
+
+body {
+  font-family: '微软雅黑', Arial, monospace;
+  color: #0c1011;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none !important;
+
+  //&:hover {
+  //  color: #0c1011;
+  //}
+
+}
+
+// 变量集
+//
+//
+// 1. 上下导航条背景颜色
+@nav-bg: #252525;
+@footer-bg: #3b3b39;
+// 2. 热搜栏
+@hot-search-info-head-bg: #9bede9;
+@hot-search-info-content-bg: #63c0ad;
