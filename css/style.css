@@ -139,6 +139,7 @@ html {
   transform: translateY(8px);
 }
 .main .click div .author {
+  margin-top: 15px;
   color: #08e9d2;
   opacity: 0.8;
 }
