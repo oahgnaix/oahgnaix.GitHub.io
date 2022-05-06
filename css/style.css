@@ -3,6 +3,7 @@ body {
   background-image: url("../img/gb.gif");
   color: #fff;
   box-sizing: border-box;
+  user-select: none;
 }
 a {
   text-decoration: none !important;
@@ -98,6 +99,15 @@ html {
   background: #15c6b4;
   color: #0d0d00;
   /* 文本颜色 */
+}
+.header .title {
+  padding: 40px;
+  position: relative;
+  top: -50px;
+  text-align: center;
+}
+.header h1 {
+  font-size: 40px;
 }
 .main {
   padding: 20px 20px 120px 20px;

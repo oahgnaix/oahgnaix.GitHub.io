@@ -85,19 +85,6 @@
     传统动画 -> 动画片 动态效果 -> 本身由很多张静止的画面去连续播放形成的
  */
 
-/* 标题 */
-.title {
-    padding: 40px;
-    position: relative;
-    top: -50px;
-    text-align: center;
-}
-
-/* 标题字体加大 */
-.title h1 {
-    font-size: 40px;
-}
-
 hr {
     margin-top: 50px;
     border-color: #4df107;
