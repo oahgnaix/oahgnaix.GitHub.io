@@ -44,11 +44,11 @@ body {
 }
 
 .content th:hover {
-    background-color: #00AFF0;
+    background-color: #f1dc0a;
 }
 
 .content td:hover {
-    background-color: #00AFF0;
+    background-color: #f1dc0a;
     font-size: medium;
 }
 
