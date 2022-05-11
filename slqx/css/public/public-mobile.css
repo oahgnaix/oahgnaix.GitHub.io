@@ -1,0 +1,77 @@
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 5.20833333vw;
+    background-color: #eff0f4;
+  }
+  .navbar .nav-mi .navbar-header .logo {
+    min-width: 120px;
+  }
+  .navbar .nav-mi .sign-in {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .navbar .nav-mi .mobile-search {
+    position: absolute;
+    width: 8.75rem;
+    top: 10px;
+    left: 60%;
+    transform: translateX(-50%);
+  }
+  .navbar .nav-mi .mobile-search form {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+  }
+  .navbar .nav-mi .mobile-search form .btn {
+    margin-bottom: 15px;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  .mobile-nav {
+    margin-top: 0.5rem;
+    padding: 0 2.5rem;
+    height: 2rem;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .mobile-nav a {
+    color: #0c1011;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .mobile-nav a:nth-child(odd) {
+    padding-top: 5px;
+    font-size: 0.85rem;
+  }
+  .company-wrapper .company-info {
+    padding: 0;
+  }
+  .company-wrapper .company-info .row > div {
+    border-right: none;
+    padding: 0 0 0 15px;
+  }
+  .company-wrapper .company-info .row .contact {
+    padding-left: 0;
+  }
+  .company-wrapper .company-info .row .wechat img {
+    width: 6rem;
+    height: 100%;
+  }
+  .company-wrapper .company-info .row .wechat h3 {
+    font-size: 0.75rem;
+  }
+  .company-wrapper .company-info .row h2 {
+    font-size: 0.95rem;
+    display: inline-block;
+    border-bottom: 2px solid red;
+    padding: 0 0 5px 0;
+  }
+  .company-wrapper .company-info .row h4 {
+    color: #928a8a;
+    line-height: 20px;
+    font-size: 0.625rem;
+  }
+}
+/*# sourceMappingURL=public-mobile.css.map */

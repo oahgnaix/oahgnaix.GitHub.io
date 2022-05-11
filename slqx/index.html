@@ -19,10 +19,8 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="mybootstrap/css/bootstrap.min.css">
     <!-- 引入字体图标库 -->
-    <link rel="stylesheet" href="#">
-    <!-- 引入公共样式 -->
-    <link rel="stylesheet" href="./css/base.min.css">
-    <!-- 引入此网页样式 -->
+    <link rel="stylesheet" href="fa/css/all.min.css">
+    <!-- 引入网页样式 -->
     <link rel="stylesheet" href="./css/index.min.css">
     <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
     <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
@@ -46,25 +44,21 @@
                 <span class="icon-bar"></span>
             </button>
             <!-- logo -->
-            <a class="navbar-brand logo" href="javascript:">
-                <img src="http://ramgjjorm.hn-bkt.clouddn.com/slqx/img/logo.png" alt="十里黔香">
+            <a class="navbar-brand logo" href="index.html">
+                <img src="img/logo.png" alt="十里黔香">
             </a>
         </div>
         <!-- PC端导航栏 -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav nav-items">
-                <li class="active"><a href="javascript:">首页 <span class="sr-only">(current)</span></a></li>
+                <li class="active"><a href="index.html">首页 <span class="sr-only">(current)</span></a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">分类 <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="javascript:">1类</a></li>
-                        <li><a href="javascript:">2类</a></li>
-                        <li><a href="javascript:">3类</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="javascript:">离开本页面1</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="javascript:">离开本页面2</a></li>
+                        <li><a href="javascript:">贵阳</a></li>
+                        <li><a href="javascript:">遵义</a></li>
+                        <li><a href="javascript:">铜仁</a></li>
                     </ul>
                 </li>
                 <li><a href="#">商城</a></li>
@@ -108,35 +102,25 @@
 </nav>
 <!-- 轮播图 -->
 <div id="carousel-example-generic" class="carousel slide hidden-xs" data-ride="carousel">
-    <!-- 轮播点区域 x5 -->
+    <!-- 轮播点区域 x3 -->
     <ol class="carousel-indicators">
         <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
         <li data-target="#carousel-example-generic" data-slide-to="1"></li>
         <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="4"></li>
     </ol>
 
-    <!-- 轮播图区域 x5 -->
+    <!-- 轮播图区域 x3 -->
     <div class="carousel-inner" role="listbox">
         <div class="item active">
-            <img src="http://ramgjjorm.hn-bkt.clouddn.com/slqx/img/lunbo/lunbo05.jpg" alt="你的浏览器不支持...">
+            <img src="img/lunbo/lunbo01.jpg" alt="你的浏览器不支持...">
             <div class="carousel-caption"></div>
         </div>
         <div class="item">
-            <img src="http://ramgjjorm.hn-bkt.clouddn.com/slqx/img/lunbo/lunbo05.jpg" alt="你的浏览器不支持...">
+            <img src="img/lunbo/lunbo02.jpg" alt="你的浏览器不支持...">
             <div class="carousel-caption"></div>
         </div>
         <div class="item">
-            <img src="http://ramgjjorm.hn-bkt.clouddn.com/slqx/img/lunbo/lunbo05.jpg" alt="你的浏览器不支持...">
-            <div class="carousel-caption"></div>
-        </div>
-        <div class="item">
-            <img src="http://ramgjjorm.hn-bkt.clouddn.com/slqx/img/lunbo/lunbo05.jpg" alt="你的浏览器不支持...">
-            <div class="carousel-caption"></div>
-        </div>
-        <div class="item">
-            <img src="http://ramgjjorm.hn-bkt.clouddn.com/slqx/img/lunbo/lunbo05.jpg" alt="你的浏览器不支持...">
+            <img src="img/lunbo/lunbo03.jpg" alt="你的浏览器不支持...">
             <div class="carousel-caption"></div>
         </div>
     </div>
@@ -158,8 +142,8 @@
     <a href="javascript:">广场</a>
 </div>
 <!-- 热搜 -->
-<div class="container">
-    <button class="btn btn-danger hot-search hidden-xs" type="button" data-toggle="collapse"
+<div class="container hot-search hidden-xs">
+    <button class="btn btn-danger hot-search-title" type="button" data-toggle="collapse"
             data-target="#collapseExample"
             aria-expanded="false" aria-controls="collapseExample">
         今日热搜 >>
@@ -167,433 +151,78 @@
     <div class="collapse hot-search-info" id="collapseExample">
         <div class="well">
             <ul class="row">
-                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                    <p>xx排行榜</p>
-                    <a href=""><p>1</p></a>
-                    <a href=""><p>2</p></a>
-                    <a href=""><p>3</p></a>
+                <li class="col-lg-4 col-md-4 col-sm-8 col-xs-12">
+                    <p>热度排行榜</p>
+                    <a href=""><p>1 贵阳丝娃娃</p></a>
+                    <a href=""><p>2 青岩状元蹄</p></a>
+                    <a href=""><p>3 正安蒸米皮</p></a>
                 </li>
-                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                    <p>xx排行榜</p>
-                    <a href=""><p>1</p></a>
-                    <a href=""><p>2</p></a>
-                    <a href=""><p>3</p></a>
+                <li class="col-lg-4 col-md-4 col-sm-8 col-xs-12">
+                    <p>热销排行榜</p>
+                    <a href=""><p>1 贵阳丝娃娃</p></a>
+                    <a href=""><p>2 青岩状元蹄</p></a>
+                    <a href=""><p>3 正安蒸米皮</p></a>
                 </li>
-                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                    <p>xx排行榜</p>
-                    <a href=""><p>1</p></a>
-                    <a href=""><p>2</p></a>
-                    <a href=""><p>3</p></a>
-                </li>
-                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                    <p>xx排行榜</p>
-                    <a href=""><p>1</p></a>
-                    <a href=""><p>2</p></a>
-                    <a href=""><p>3</p></a>
+                <li class="col-lg-4 col-md-4 col-sm-8 col-xs-12">
+                    <p>美食教程</p>
+                    <a href=""><p>1 贵阳丝娃娃</p></a>
+                    <a href=""><p>2 青岩状元蹄</p></a>
+                    <a href=""><p>3 正安蒸米皮</p></a>
                 </li>
             </ul>
         </div>
     </div>
 </div>
-<!-- 视频专区 -->
-<div class="container video-head">
+<!-- 美食专区 -->
+<div class="container food-head">
     <div class="row">
         <div class="col-sm-12">
             <ul>
-                <li class="hidden-xs">特色产品视频</li>
-                <li class="hidden-xs"><a href="javascript:">更多视频 +</a></li>
+                <li class="hidden-xs">地方特色美食</li>
+                <li class="hidden-xs"><a href="javascript:">更多 +</a></li>
                 <li class="visible-xs">为你推荐</li>
                 <li class="visible-xs"><a href="javascript:">更多 +</a></li>
             </ul>
         </div>
     </div>
 </div>
-<!-- 各地区视频(贵阳) -->
-<div class="container video-local">
+<!-- 各地区美食(贵阳) -->
+<div class="container food-local">
     <div class="row">
         <div class="col-sm-12 ul">
             <h3>贵阳</h3>
             <i class="glyphicon glyphicon-tag"></i>
         </div>
     </div>
-    <div class="row video-wrapper">
-        <div class="col-sm-4 col-xs-7 video">
+    <div class="row food-wrapper">
+        <div class="col-sm-4 col-xs-7 food">
             <div class="thumbnail">
-                <div class="embed-responsive embed-responsive-4by3 video-content">
-                    <iframe class="embed-responsive-item"
-                            src="//player.bilibili.com/player.html?aid=980206450&bvid=BV1C44y1A7gN&cid=560964015&page=1"></iframe>
-                </div>
-                <div class="caption video-info visible-lg">
-                    <h4>标题</h4>
-                    <p>内容</p>
-                </div>
-            </div>
-            <div class="video-title">
-                <h4 class="hidden-lg">特色美食</h4>
-                <p>发表于2012年3月4日</p>
-                <p>
-                    <i class="glyphicon glyphicon-thumbs-up"></i>
-                    <span>(15)</span>
-                    <i class="glyphicon glyphicon-comment"></i>
-                    <span>(23)</span>
-                </p>
+                <a href="food/guiyang/siwawa.html">
+                    <img class="food-cover img-responsive" src="img/guiyang/siwawa.jpg" alt="丝娃娃">
+                    <div class="caption">
+                        <h2 class="food-title">丝娃娃</h2>
+                    </div>
+                </a>
             </div>
         </div>
-        <div class="col-sm-4 col-xs-7 video">
+        <div class="col-sm-4 col-xs-7 food">
             <div class="thumbnail">
-                <div class="embed-responsive embed-responsive-4by3 video-content">
-                    <iframe class="embed-responsive-item"
-                            src="//player.bilibili.com/player.html?aid=467010252&bvid=BV1CL411N7ba&cid=544990812&page=1"></iframe>
-                </div>
-                <div class="caption video-info visible-lg">
-                    <h4>标题</h4>
-                    <p>内容</p>
-                </div>
-            </div>
-            <div class="video-title">
-                <h4 class="hidden-lg">特色美食</h4>
-                <p>发表于2012年3月4日</p>
-                <p>
-                    <i class="glyphicon glyphicon-thumbs-up"></i>
-                    <span>(15)</span>
-                    <i class="glyphicon glyphicon-comment"></i>
-                    <span>(23)</span>
-                </p>
+                <a href="#">
+                    <img class="food-cover img-responsive" src="img/guiyang/花溪牛肉粉.jpg" alt="花溪牛肉粉">
+                    <div class="caption">
+                        <h2 class="food-title">花溪牛肉粉</h2>
+                    </div>
+                </a>
             </div>
         </div>
-        <div class="col-sm-4 col-xs-7 video">
+        <div class="col-sm-4 col-xs-7 food">
             <div class="thumbnail">
-                <div class="embed-responsive embed-responsive-4by3 video-content">
-                    <iframe class="embed-responsive-item"
-                            src="//player.bilibili.com/player.html?aid=711366271&bvid=BV1fD4y1S73Q&cid=212126658&page=1"
-                    ></iframe>
-                </div>
-                <div class="caption video-info visible-lg">
-                    <h4>标题</h4>
-                    <p>内容</p>
-                </div>
-            </div>
-            <div class="video-title">
-                <h4 class="hidden-lg">特色美食</h4>
-                <p>发表于2012年3月4日</p>
-                <p>
-                    <i class="glyphicon glyphicon-thumbs-up"></i>
-                    <span>(15)</span>
-                    <i class="glyphicon glyphicon-comment"></i>
-                    <span>(23)</span>
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- 各地区视频(遵义) -->
-<div class="container video-local">
-    <div class="row">
-        <div class="col-sm-12 ul">
-            <h3>遵义</h3>
-            <i class="glyphicon glyphicon-tag"></i>
-        </div>
-    </div>
-    <div class="row video-wrapper">
-        <div class="col-sm-4 col-xs-7 video">
-            <div class="thumbnail">
-                <div class="embed-responsive embed-responsive-4by3 video-content">
-                    <iframe class="embed-responsive-item"
-                            src="//player.bilibili.com/player.html?aid=980206450&bvid=BV1C44y1A7gN&cid=560964015&page=1"></iframe>
-                </div>
-                <div class="caption video-info visible-lg">
-                    <h4>标题</h4>
-                    <p>内容</p>
-                </div>
-            </div>
-            <div class="video-title">
-                <h4 class="hidden-lg">特色美食</h4>
-                <p>发表于2012年3月4日</p>
-                <p>
-                    <i class="glyphicon glyphicon-thumbs-up"></i>
-                    <span>(15)</span>
-                    <i class="glyphicon glyphicon-comment"></i>
-                    <span>(23)</span>
-                </p>
-            </div>
-        </div>
-        <div class="col-sm-4 col-xs-7 video">
-            <div class="thumbnail">
-                <div class="embed-responsive embed-responsive-4by3 video-content">
-                    <iframe class="embed-responsive-item"
-                            src="//player.bilibili.com/player.html?aid=467010252&bvid=BV1CL411N7ba&cid=544990812&page=1"></iframe>
-                </div>
-                <div class="caption video-info visible-lg">
-                    <h4>标题</h4>
-                    <p>内容</p>
-                </div>
-            </div>
-            <div class="video-title">
-                <h4 class="hidden-lg">特色美食</h4>
-                <p>发表于2012年3月4日</p>
-                <p>
-                    <i class="glyphicon glyphicon-thumbs-up"></i>
-                    <span>(15)</span>
-                    <i class="glyphicon glyphicon-comment"></i>
-                    <span>(23)</span>
-                </p>
-            </div>
-        </div>
-        <div class="col-sm-4 col-xs-7 video">
-            <div class="thumbnail">
-                <div class="embed-responsive embed-responsive-4by3 video-content">
-                    <iframe class="embed-responsive-item"
-                            src="//player.bilibili.com/player.html?aid=711366271&bvid=BV1fD4y1S73Q&cid=212126658&page=1"
-                    ></iframe>
-                </div>
-                <div class="caption video-info visible-lg">
-                    <h4>标题</h4>
-                    <p>内容</p>
-                </div>
-            </div>
-            <div class="video-title">
-                <h4 class="hidden-lg">特色美食</h4>
-                <p>发表于2012年3月4日</p>
-                <p>
-                    <i class="glyphicon glyphicon-thumbs-up"></i>
-                    <span>(15)</span>
-                    <i class="glyphicon glyphicon-comment"></i>
-                    <span>(23)</span>
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- 各地区视频(六盘水) -->
-<div class="container video-local">
-    <div class="row">
-        <div class="col-sm-12 ul">
-            <h3>六盘水</h3>
-            <i class="glyphicon glyphicon-tag"></i>
-        </div>
-    </div>
-    <div class="row video-wrapper">
-        <div class="col-sm-4 col-xs-7 video">
-            <div class="thumbnail">
-                <div class="embed-responsive embed-responsive-4by3 video-content">
-                    <iframe class="embed-responsive-item"
-                            src="//player.bilibili.com/player.html?aid=980206450&bvid=BV1C44y1A7gN&cid=560964015&page=1"></iframe>
-                </div>
-                <div class="caption video-info visible-lg">
-                    <h4>标题</h4>
-                    <p>内容</p>
-                </div>
-            </div>
-            <div class="video-title">
-                <h4 class="hidden-lg">特色美食</h4>
-                <p>发表于2012年3月4日</p>
-                <p>
-                    <i class="glyphicon glyphicon-thumbs-up"></i>
-                    <span>(15)</span>
-                    <i class="glyphicon glyphicon-comment"></i>
-                    <span>(23)</span>
-                </p>
-            </div>
-        </div>
-        <div class="col-sm-4 col-xs-7 video">
-            <div class="thumbnail">
-                <div class="embed-responsive embed-responsive-4by3 video-content">
-                    <iframe class="embed-responsive-item"
-                            src="//player.bilibili.com/player.html?aid=467010252&bvid=BV1CL411N7ba&cid=544990812&page=1"></iframe>
-                </div>
-                <div class="caption video-info visible-lg">
-                    <h4>标题</h4>
-                    <p>内容</p>
-                </div>
-            </div>
-            <div class="video-title">
-                <h4 class="hidden-lg">特色美食</h4>
-                <p>发表于2012年3月4日</p>
-                <p>
-                    <i class="glyphicon glyphicon-thumbs-up"></i>
-                    <span>(15)</span>
-                    <i class="glyphicon glyphicon-comment"></i>
-                    <span>(23)</span>
-                </p>
-            </div>
-        </div>
-        <div class="col-sm-4 col-xs-7 video">
-            <div class="thumbnail">
-                <div class="embed-responsive embed-responsive-4by3 video-content">
-                    <iframe class="embed-responsive-item"
-                            src="//player.bilibili.com/player.html?aid=711366271&bvid=BV1fD4y1S73Q&cid=212126658&page=1"
-                    ></iframe>
-                </div>
-                <div class="caption video-info visible-lg">
-                    <h4>标题</h4>
-                    <p>内容</p>
-                </div>
-            </div>
-            <div class="video-title">
-                <h4 class="hidden-lg">特色美食</h4>
-                <p>发表于2012年3月4日</p>
-                <p>
-                    <i class="glyphicon glyphicon-thumbs-up"></i>
-                    <span>(15)</span>
-                    <i class="glyphicon glyphicon-comment"></i>
-                    <span>(23)</span>
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- 各地区视频(铜仁) -->
-<div class="container video-local">
-    <div class="row">
-        <div class="col-sm-12 ul">
-            <h3>铜仁</h3>
-            <i class="glyphicon glyphicon-tag"></i>
-        </div>
-    </div>
-    <div class="row video-wrapper">
-        <div class="col-sm-4 col-xs-7 video">
-            <div class="thumbnail">
-                <div class="embed-responsive embed-responsive-4by3 video-content">
-                    <iframe class="embed-responsive-item"
-                            src="//player.bilibili.com/player.html?aid=980206450&bvid=BV1C44y1A7gN&cid=560964015&page=1"></iframe>
-                </div>
-                <div class="caption video-info visible-lg">
-                    <h4>标题</h4>
-                    <p>内容</p>
-                </div>
-            </div>
-            <div class="video-title">
-                <h4 class="hidden-lg">特色美食</h4>
-                <p>发表于2012年3月4日</p>
-                <p>
-                    <i class="glyphicon glyphicon-thumbs-up"></i>
-                    <span>(15)</span>
-                    <i class="glyphicon glyphicon-comment"></i>
-                    <span>(23)</span>
-                </p>
-            </div>
-        </div>
-        <div class="col-sm-4 col-xs-7 video">
-            <div class="thumbnail">
-                <div class="embed-responsive embed-responsive-4by3 video-content">
-                    <iframe class="embed-responsive-item"
-                            src="//player.bilibili.com/player.html?aid=467010252&bvid=BV1CL411N7ba&cid=544990812&page=1"></iframe>
-                </div>
-                <div class="caption video-info visible-lg">
-                    <h4>标题</h4>
-                    <p>内容</p>
-                </div>
-            </div>
-            <div class="video-title">
-                <h4 class="hidden-lg">特色美食</h4>
-                <p>发表于2012年3月4日</p>
-                <p>
-                    <i class="glyphicon glyphicon-thumbs-up"></i>
-                    <span>(15)</span>
-                    <i class="glyphicon glyphicon-comment"></i>
-                    <span>(23)</span>
-                </p>
-            </div>
-        </div>
-        <div class="col-sm-4 col-xs-7 video">
-            <div class="thumbnail">
-                <div class="embed-responsive embed-responsive-4by3 video-content">
-                    <iframe class="embed-responsive-item"
-                            src="//player.bilibili.com/player.html?aid=711366271&bvid=BV1fD4y1S73Q&cid=212126658&page=1"
-                    ></iframe>
-                </div>
-                <div class="caption video-info visible-lg">
-                    <h4>标题</h4>
-                    <p>内容</p>
-                </div>
-            </div>
-            <div class="video-title">
-                <h4 class="hidden-lg">特色美食</h4>
-                <p>发表于2012年3月4日</p>
-                <p>
-                    <i class="glyphicon glyphicon-thumbs-up"></i>
-                    <span>(15)</span>
-                    <i class="glyphicon glyphicon-comment"></i>
-                    <span>(23)</span>
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- 各地区视频(黔南) -->
-<div class="container video-local">
-    <div class="row">
-        <div class="col-sm-12 ul">
-            <h3>黔南</h3>
-            <i class="glyphicon glyphicon-tag"></i>
-        </div>
-    </div>
-    <div class="row video-wrapper">
-        <div class="col-sm-4 col-xs-7 video">
-            <div class="thumbnail">
-                <div class="embed-responsive embed-responsive-4by3 video-content">
-                    <iframe class="embed-responsive-item"
-                            src="//player.bilibili.com/player.html?aid=980206450&bvid=BV1C44y1A7gN&cid=560964015&page=1"></iframe>
-                </div>
-                <div class="caption video-info visible-lg">
-                    <h4>标题</h4>
-                    <p>内容</p>
-                </div>
-            </div>
-            <div class="video-title">
-                <h4 class="hidden-lg">特色美食</h4>
-                <p>发表于2012年3月4日</p>
-                <p>
-                    <i class="glyphicon glyphicon-thumbs-up"></i>
-                    <span>(15)</span>
-                    <i class="glyphicon glyphicon-comment"></i>
-                    <span>(23)</span>
-                </p>
-            </div>
-        </div>
-        <div class="col-sm-4 col-xs-7 video">
-            <div class="thumbnail">
-                <div class="embed-responsive embed-responsive-4by3 video-content">
-                    <iframe class="embed-responsive-item"
-                            src="//player.bilibili.com/player.html?aid=467010252&bvid=BV1CL411N7ba&cid=544990812&page=1"></iframe>
-                </div>
-                <div class="caption video-info visible-lg">
-                    <h4>标题</h4>
-                    <p>内容</p>
-                </div>
-            </div>
-            <div class="video-title">
-                <h4 class="hidden-lg">特色美食</h4>
-                <p>发表于2012年3月4日</p>
-                <p>
-                    <i class="glyphicon glyphicon-thumbs-up"></i>
-                    <span>(15)</span>
-                    <i class="glyphicon glyphicon-comment"></i>
-                    <span>(23)</span>
-                </p>
-            </div>
-        </div>
-        <div class="col-sm-4 col-xs-7 video">
-            <div class="thumbnail">
-                <div class="embed-responsive embed-responsive-4by3 video-content">
-                    <iframe class="embed-responsive-item"
-                            src="//player.bilibili.com/player.html?aid=711366271&bvid=BV1fD4y1S73Q&cid=212126658&page=1"
-                    ></iframe>
-                </div>
-                <div class="caption video-info visible-lg">
-                    <h4>标题</h4>
-                    <p>内容</p>
-                </div>
-            </div>
-            <div class="video-title">
-                <h4 class="hidden-lg">特色美食</h4>
-                <p>发表于2012年3月4日</p>
-                <p>
-                    <i class="glyphicon glyphicon-thumbs-up"></i>
-                    <span>(15)</span>
-                    <i class="glyphicon glyphicon-comment"></i>
-                    <span>(23)</span>
-                </p>
+                <a href="#">
+                    <img class="food-cover img-responsive" src="img/guiyang/豆米火锅.jpg" alt="豆米火锅">
+                    <div class="caption">
+                        <h2 class="food-title">豆米火锅</h2>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
