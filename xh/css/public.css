@@ -1,0 +1,169 @@
+body {
+  font-family: '微软雅黑', Arial, monospace;
+  background-image: url("../img/bg.gif");
+  color: #fff;
+  box-sizing: border-box;
+  user-select: none;
+}
+a {
+  text-decoration: none !important;
+  color: #fff;
+}
+ul {
+  list-style-type: none;
+}
+.w {
+  width: 1440px;
+  margin: 0 auto;
+}
+.clearfix::before,
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+/*
+@total-width: 768px;
+
+// vw适配
+html {
+  // 设置rem的比值
+  font-size: (100vw/@total-width * 40);
+}*/
+.nav_down {
+  position: fixed;
+  bottom: 380px;
+  right: 50%;
+  margin-right: -890px;
+  width: 60px;
+  height: 40px;
+  border: 1px solid #34f804;
+  border-bottom: none;
+  border-top-left-radius: 5px;
+  /* 边框圆角 半径 */
+  border-top-right-radius: 5px;
+  background: #031318;
+  z-index: 99;
+}
+.nav_down li {
+  width: 60px;
+  height: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+  /* 文本水平居中 */
+  line-height: 30px;
+  /* 行间距 行高=元素高度 垂直方向居中 */
+  font-size: 14px;
+  /* 文本大小 谷歌浏览器默认文字大小是16px */
+  cursor: pointer;
+  /* 鼠标样式 : 手指 */
+}
+.nav_down li:hover {
+  height: 30px;
+  line-height: 30px;
+  background: #15c6b4;
+  color: #0d0d00;
+  /* 文本颜色 */
+}
+.nav_up {
+  position: fixed;
+  bottom: 150px;
+  right: 50%;
+  margin-right: -890px;
+  width: 60px;
+  height: 230px;
+  background: #031318;
+  border: 1px solid #34f804;
+  border-top: none;
+  border-bottom-left-radius: 5px;
+  /* 边框圆角 半径 */
+  border-bottom-right-radius: 5px;
+  z-index: 99;
+}
+.nav_up li {
+  width: 60px;
+  height: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+  /* 文本水平居中 */
+  line-height: 30px;
+  /* 行间距 行高=元素高度 垂直方向居中 */
+  font-size: 14px;
+  /* 文本大小 谷歌浏览器默认文字大小是16px */
+  cursor: pointer;
+  /* 鼠标样式 : 手指 */
+}
+.nav_up li:hover {
+  height: 30px;
+  line-height: 30px;
+  background: #15c6b4;
+  color: #0d0d00;
+  /* 文本颜色 */
+}
+.header .title {
+  padding: 40px;
+  position: relative;
+  top: -50px;
+  text-align: center;
+}
+.header h1 {
+  font-size: 40px;
+}
+.main {
+  padding: 20px 20px 120px 20px;
+  border: #2ecd5f solid 2px;
+  border-radius: 25px;
+  background-color: rgba(169, 166, 166, 0.2);
+  text-align: center;
+}
+.main .main-title {
+  font-size: 25px;
+  font-weight: bold;
+  padding: 20px 0 60px;
+}
+.main .click {
+  margin: 0 auto;
+  width: 1000px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.main .click div {
+  text-align: center;
+  line-height: 20px;
+  padding: 10px;
+}
+.main .click div a {
+  display: block;
+  padding: 14px 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.main .click div a:hover {
+  color: black;
+  background-color: #aeedd9;
+  transform: translateY(-2px) translateX(-2px);
+}
+.main .click div a:active {
+  transform: translateY(8px);
+}
+.main .click div .author {
+  margin-top: 15px;
+  color: #08e9d2;
+  opacity: 0.8;
+}
+/* 底部 */
+.footer {
+  padding: 50px 0;
+  width: 100%;
+  text-align: center;
+}
+.footer .copyright {
+  font-size: 20px;
+  line-height: 20px;
+}
+.footer .copyright-info {
+  margin-top: 20px;
+}
+/*# sourceMappingURL=public.css.map */
