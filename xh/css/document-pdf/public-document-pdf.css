@@ -168,12 +168,10 @@ html {
 }
 body {
   background-image: none;
-  background-color: #2A2A2E;
 }
 @media screen and (max-width: 768px) {
   html {
     font-size: 5.20833333vw;
-    background-color: #eff0f4;
   }
   .document-pdf {
     height: 100vw;
