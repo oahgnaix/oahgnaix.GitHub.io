@@ -1,0 +1,32 @@
+@import "public/public-mobile";
+
+// 移动端
+@media screen {
+  @media (max-width: 768px) {
+    // 各地区美食
+    .food-local {
+      // 地点
+      .ul {
+        h3 {
+          font-size: (34/40rem);
+        }
+
+        i {
+          font-size: (26/40rem);
+        }
+      }
+
+      // 美食
+      .food-wrapper {
+        display: flex;
+        overflow: auto;
+        margin: 0 auto;
+        width: (708/40rem);
+
+        .food {
+          flex: none;
+        }
+      }
+    }
+  }
+}

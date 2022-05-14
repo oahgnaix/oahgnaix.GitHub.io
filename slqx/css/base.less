@@ -1,0 +1,34 @@
+body {
+  font-family: '微软雅黑', Arial, monospace;
+  color: #0c1011;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none !important;
+
+  //&:hover {
+  //  color: #0c1011;
+  //}
+
+}
+
+// 变量集
+//
+//
+// 1. 上下导航条背景颜色
+@nav-bg: #252525;
+@footer-bg: #3b3b39;
+// 2. 热搜栏
+@hot-search-info-head-bg: rgba(242, 122, 164, 0.25);
+@hot-search-info-content-bg: rgba(215, 209, 103, 0.49);
+@hot-search-info-content-info: #0626f4;
+
+// 大于框架宽度：使用1440px自定义宽度
+@media screen {
+  @media (min-width: 1440px) {
+    .container {
+      width: 1440px;
+    }
+  }
+}

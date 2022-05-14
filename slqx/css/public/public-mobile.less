@@ -1,0 +1,121 @@
+// 移动端
+@media screen {
+  @media (max-width: 768px) {
+    @total-width: 768px;
+
+    // vw适配
+    html {
+      // 设置rem的比值
+      font-size: (100vw/@total-width * 40);
+      background-color: #eff0f4;
+    }
+
+    // 导航栏
+    .navbar {
+      .nav-mi {
+        // logo
+        .navbar-header {
+          .logo {
+            min-width: 120px;
+          }
+        }
+
+        // 登录、注册
+        .sign-in {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        // 移动端搜索框
+        .mobile-search {
+          // 使用新技术：变形里的平移居中(改：定位)法
+          position: absolute;
+          width: (350/40rem);
+          top: 10px;
+          left: 60%;
+          transform: translateX(-50%);
+
+          form {
+            display: flex !important;
+            flex-direction: row;
+            align-items: center;
+
+            .btn {
+              margin-bottom: 15px;
+              padding-left: 4px;
+              padding-right: 4px;
+            }
+          }
+        }
+
+      }
+    }
+
+    // 移动端显示导航
+    .mobile-nav {
+      margin-top: (20/40rem);
+      padding: 0 (100/40rem);
+      height: (80/40rem);
+      display: flex !important;
+      align-items: center;
+      justify-content: space-around;
+
+      a {
+        color: #0c1011;
+        font-size: (40/40rem);
+        font-weight: bold;
+
+        &:nth-child(odd) {
+          padding-top: 5px;
+          font-size: (34/40rem);
+        }
+      }
+    }
+
+    // 本司相关介绍
+    .company-wrapper {
+      .company-info {
+        padding: 0;
+
+        .row {
+
+          > div {
+            border-right: none;
+            padding: 0 0 0 15px;
+          }
+
+          .contact {
+            padding-left: 0;
+          }
+
+          .wechat {
+
+            img {
+              width: (240/40rem);
+              height: 100%;
+            }
+
+            h3 {
+              font-size: (30/40rem);
+            }
+
+          }
+
+          h2 {
+            font-size: (38/40rem);
+            display: inline-block;
+            border-bottom: 2px solid red;
+            padding: 0 0 5px 0;
+          }
+
+          h4 {
+            color: #928a8a;
+            line-height: 20px;
+            font-size: (25/40rem);
+          }
+        }
+      }
+    }
+  }
+}

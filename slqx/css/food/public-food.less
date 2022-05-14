@@ -1,0 +1,122 @@
+@import "../public/public-index";
+
+// 导航栏
+.navbar {
+  .nav-mi {
+    // PC端导航栏
+    .navbar-collapse {
+      .navbar-nav {
+        .dropdown {
+          .dropdown-toggle {
+            color: #fff;
+          }
+
+          .dropdown-menu {
+            .active {
+              a {
+                font-weight: bold;
+                color: #ff0040;
+                background-color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 美食信息
+.siwawa {
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  .row {
+    .siwawa-left-wrapper {
+
+      .siwawa-video {
+        position: relative;
+
+        .js-play-none {
+          display: none;
+        }
+
+        .play {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+          border: 3px solid black;
+          width: 60px;
+          height: 60px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          z-index: 9;
+
+          i {
+            font-size: 22px;
+          }
+
+        }
+      }
+
+      .siwawa-picture {
+        position: relative;
+        margin-top: 30px;
+
+        img {
+          width: 100%;
+        }
+
+        i {
+          position: absolute;
+          bottom: 0;
+          right: 10px;
+          font-size: 38px;
+          color: #AEB7BF;
+          text-align: center;
+
+          p {
+            font-size: 18px;
+          }
+
+        }
+      }
+    }
+
+    .siwawa-right-wrapper {
+      .siwawa-info {
+        .panel-body {
+          p {
+            line-height: 56px;
+            font-size: 18px;
+          }
+        }
+      }
+
+      .siwawa-local {
+        .panel-title {
+          h3 {
+            margin-left: 30px;
+            font-weight: bold;
+          }
+        }
+
+        .panel-body {
+          font-size: 16px;
+          text-align: center;
+          line-height: 60px;
+        }
+      }
+    }
+  }
+}
+
+// 三端顺序不可交换
+@import "public-food-pc";
+@import "public-food-flat";
+@import "public-food-mobile";

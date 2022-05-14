@@ -1,0 +1,46 @@
+@import "public/public-pc";
+
+// PC端
+@media screen {
+  @media (max-width: 1400px) {
+    @total-width: 1400px;
+
+    // vw适配
+    html {
+      // 设置rem的比值
+      font-size: (100vw/@total-width * 40);
+      background-color: #eff0f4;
+    }
+
+    // 美食专区
+    .food-head {
+      ul {
+        li {
+          font-size: (30/40rem);
+
+          &:nth-child(even) {
+            a {
+              font-size: inherit;
+              color: red;
+            }
+          }
+
+        }
+      }
+    }
+
+    // 各地区美食
+    .food-local {
+      // 封面
+      .food-wrapper {
+        .food {
+          .thumbnail {
+            .food-title {
+              font-size: (30/40rem);
+            }
+          }
+        }
+      }
+    }
+  }
+}

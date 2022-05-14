@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- 让IE以edge版本状态匹配 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 通过为视口（viewport）设置 meta 属性为 user-scalable=no 可以禁用其缩放（zooming）功能 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <!-- 搜索引擎识别内容区 -->
+    <title>十里黔香</title>
+    <meta name="description"
+          content=""/>
+    <meta name="keywords" content="十里黔香、贵州美食、贵州特色美食、美食、贵州小吃"/>
+    <!-- 引入logo -->
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico"/>
+    <!-- 引入去除默认样式 放最前面 -->
+    <link rel="stylesheet" href="../../css/public/reset.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../mybootstrap/css/bootstrap.min.css">
+    <!-- 引入字体图标库 -->
+    <link rel="stylesheet" href="../../fa/css/all.min.css">
+    <!-- 引入网页样式 -->
+    <link rel="stylesheet" href="../../css/food/public-food.min.css">
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+    <script src="../../mybootstrap/js/html5shiv.js"></script>
+    <script src="../../mybootstrap/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!-- 导航区 -->
+<nav class="navbar navbar-default navbar-inverse">
+    <div class="container nav-mi">
+        <!-- 移动端菜单栏 -->
+        <div class="navbar-header">
+            <!-- 菜单栏弹出层按钮 -->
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- logo -->
+            <a class="navbar-brand logo" href="../../index.html">
+                <img src="../../img/logo.png" alt="十里黔香">
+            </a>
+        </div>
+        <!-- PC端导航栏 -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav nav-items">
+                <li><a href="../../index.html">首页 <span class="sr-only">(current)</span></a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">分类 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li class="active"><a href="javascript:">贵阳</a></li>
+                        <li><a href="javascript:">遵义</a></li>
+                        <li><a href="javascript:">铜仁</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">商城</a></li>
+                <li class="hidden-xs"><a href="javascript:">广场</a></li>
+            </ul>
+            <!-- 登录注册 -->
+            <ul class="nav navbar-nav navbar-right sign-in">
+                <li>
+                    <a href="javascript:">
+                        <button type="button" class="btn btn-warning">登录</button>
+                    </a>
+                </li>
+                <li class="zhuce-wrapper">
+                    <a href="javascript:">
+                        <button type="button" class="btn btn-success">注册</button>
+                    </a>
+                </li>
+            </ul>
+            <!-- PC端搜索框 -->
+            <div class="hidden-xs pc-search">
+                <form class="navbar-form navbar-right">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="正安米皮">
+                    </div>
+                    <button type="submit" class="btn btn-default">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <!-- 移动端搜索框 -->
+        <div class="visible-xs mobile-search">
+            <form>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="正安米皮">
+                </div>
+                <button type="submit" class="btn btn-default">搜索</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<!-- 美食信息 -->
+<div class="container siwawa">
+    <div class="row">
+        <div class="slqx-lg-1"></div>
+        <div class="slqx-lg-4 slqx-md-4 siwawa-left-wrapper">
+            <div class="siwawa-video">
+                <div class="embed-responsive embed-responsive-4by3 video">
+                    <iframe class="embed-responsive-item"
+                            src="../../video/test.mp4">
+                    </iframe>
+                    <!--//player.bilibili.com/player.html?aid=467010252&bvid=BV1CL411N7ba&cid=544990812&page=1-->
+                </div>
+                <div class="play" id="js-play-button">
+                    <i class="glyphicon glyphicon-play"></i>
+                </div>
+            </div>
+            <div class="siwawa-picture">
+                <img src="../../img/guiyang/siwawa.jpg" class="img-responsive" alt="丝娃娃">
+                <i class="fa fa-images"><p>16张</p></i>
+            </div>
+        </div>
+        <div class="slqx-lg-6 slqx-md-6 siwawa-right-wrapper">
+            <div class="panel panel-info siwawa-info">
+                <div class="panel-body">
+                    <p class="text-success">
+                        丝娃娃，别名素春卷，是贵阳极具特色的传统小吃也是贵州小吃的招牌之一。在贵阳，大街小巷，随处可见。而此菜素菜脆嫩，酸辣爽口，开胃健脾。猛一看颇似产房里初生的婴儿被裹在“襁褓”中。“襁褓”是用大米面粉烙成的薄饼，薄薄如纸却有—只手掌那么大。再卷入萝卜丝、折耳根（鱼香菜）、海带丝、炸黄豆、脆哨、糊辣椒等。又名素春卷。当地人吃时，当然少不了注入酸酸辣辣的汁液。这蘸水就是丝娃娃的精髓。菜丝切得极细，红、白、黄、黑等各种色彩相间，十分漂亮。
+                    </p>
+                </div>
+            </div>
+            <div class="panel panel-primary siwawa-local text-primary">
+                <div class="panel-title">
+                    <h3>丝娃娃特色店面推荐</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="slqx-lg-4 slqx-md-4">
+                            <span class="">贵阳一号思恋丝娃娃</span>
+                        </div>
+                        <div class="slqx-lg-4 slqx-md-4">
+                            <i class="fa fa-map-marker-alt"></i>
+                            <span class="">贵阳市花溪区xxxxxx</span>
+                        </div>
+                        <div class="slqx-lg-4 slqx-md-4">
+                            <i class="glyphicon glyphicon-earphone"></i>
+                            <span class="">1xxxxxxxx</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="slqx-lg-4 slqx-md-4">
+                            <span class="">贵阳一号思恋丝娃娃</span>
+                        </div>
+                        <div class="slqx-lg-4 slqx-md-4">
+                            <i class="fa fa-map-marker-alt"></i>
+                            <span class="">贵阳市花溪区xxxxxx</span>
+                        </div>
+                        <div class="slqx-lg-4 slqx-md-4">
+                            <i class="glyphicon glyphicon-earphone"></i>
+                            <span class="">1xxxxxxxx</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="slqx-lg-4 slqx-md-4">
+                            <span class="">贵阳一号思恋丝娃娃</span>
+                        </div>
+                        <div class="slqx-lg-4 slqx-md-4">
+                            <i class="fa fa-map-marker-alt"></i>
+                            <span class="">贵阳市花溪区xxxxxx</span>
+                        </div>
+                        <div class="slqx-lg-4 slqx-md-4">
+                            <i class="glyphicon glyphicon-earphone"></i>
+                            <span class="">1xxxxxxxx</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="slqx-lg-4 slqx-md-4">
+                            <span class="">贵阳一号思恋丝娃娃</span>
+                        </div>
+                        <div class="slqx-lg-4 slqx-md-4">
+                            <i class="fa fa-map-marker-alt"></i>
+                            <span class="">贵阳市花溪区xxxxxx</span>
+                        </div>
+                        <div class="slqx-lg-4 slqx-md-4">
+                            <i class="glyphicon glyphicon-earphone"></i>
+                            <span class="">1xxxxxxxx</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 本司相关信息介绍 -->
+<div class="container-fluid company-wrapper">
+    <div class="container company-info">
+        <div class="row">
+            <div class="slqx-md-4 slqx-sm-6 slqx-xs-6 info">
+                <h2>关于</h2>
+                <h4>关于黔香</h4>
+                <h4>服务协议</h4>
+                <h4>常见问题</h4>
+            </div>
+            <div class="slqx-md-4 slqx-sm-6 slqx-xs-6 contact">
+                <h2>联系</h2>
+                <h4>加盟热线：010-123456789</h4>
+                <h4>QQ：3042088453</h4>
+                <h4>客服：18586416583</h4>
+            </div>
+            <div class="slqx-md-4 slqx-sm-12 slqx-xs-12 wechat">
+                <img src="../../img/qrcode/wechat.png" alt="">
+                <h3>扫码关注我们</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 版权声明 -->
+<div class="container-fluid copyright-wrapper">
+    <div class="copyright">
+        <p>贵州省贵阳市公网安备</p>
+        <p>营业执照</p>
+        <p>&copy;贵州省贵阳市十里黔香公司版权所有</p>
+    </div>
+</div>
+</body>
+<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+<script src="../../mybootstrap/js/jquery.min.js"></script>
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="../../mybootstrap/js/bootstrap.min.js"></script>
+<!-- 本页面的JS -->
+<script type="text/javascript" src="../../js/siwawa.js"></script>
+</html>
