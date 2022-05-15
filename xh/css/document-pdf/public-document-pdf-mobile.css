@@ -1,0 +1,16 @@
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 5.20833333vw;
+    background-color: #eff0f4;
+  }
+  .document-pdf {
+    height: 100vw;
+  }
+  .footer .copyright {
+    font-size: 0.45rem;
+  }
+  .footer .copyright-info {
+    font-size: 0.4rem;
+  }
+}
+/*# sourceMappingURL=public-document-pdf-mobile.css.map */
