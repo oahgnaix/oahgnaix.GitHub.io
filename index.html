@@ -46,6 +46,7 @@
 </div>
 <div>
     <ul class="nav_up">
+        <li>今日头条</li>
         <li>工具</li>
         <li>代码</li>
         <li>学习</li>
@@ -57,6 +58,25 @@
     </ul>
 </div>
 <div class="main w clearfix">
+    <h2 class="main-title">今日头条</h2>
+    <div class="video">
+        <!--        &lt;!&ndash; seamless 看起来像自己的页面一样，只有谷歌和Safari6支持 &ndash;&gt;
+                <iframe height="100%" width="100%"
+                        src="//player.bilibili.com/player.html?aid=467010252&bvid=BV1CL411N7ba&cid=544990812&page=1">
+                    您的浏览器不支持加载该视频
+                </iframe>-->
+        <script src='//player.polyv.net/script/player.js'></script>
+        <div id='plv_25fde5982098747818aebe7032affbf1_2'></div>
+        <script>
+            var player = polyvPlayer({
+                'wrap': '#plv_25fde5982098747818aebe7032affbf1_2',
+                'width': '100%',
+                'height': '788px',
+                'vid': '25fde5982098747818aebe7032affbf1_2',
+                'playsafe': '' // 播放加密视频的凭证, 取值参考文档: https://help.polyv.net/index.html#/vod/api/playsafe/token/create_token
+            });
+        </script>
+    </div>
     <h2 class="main-title">工具</h2>
     <div class="click">
         <div>
@@ -183,28 +203,6 @@
             <embed height="50" width="100"
                    src="">
         </audio>
-    </div>
-    <hr style="margin-top: 200px">
-    <div class="video">
-        <!--        &lt;!&ndash; seamless 看起来像自己的页面一样，只有谷歌和Safari6支持 &ndash;&gt;
-                <iframe height="100%" width="100%"
-                        src="//player.bilibili.com/player.html?aid=467010252&bvid=BV1CL411N7ba&cid=544990812&page=1">
-                    您的浏览器不支持加载该视频
-                </iframe>-->
-        <script src='//player.polyv.net/script/player.js'></script>
-        <div id='plv_25fde5982098747818aebe7032affbf1_2'></div>
-        <script>
-            var player = polyvPlayer({
-                'wrap': '#plv_25fde5982098747818aebe7032affbf1_2',
-                'width': '100%',
-                'height': '100%',
-                'vid': '25fde5982098747818aebe7032affbf1_2',
-                'playsafe': '' // 播放加密视频的凭证, 取值参考文档: https://help.polyv.net/index.html#/vod/api/playsafe/token/create_token
-            });
-        </script>
-    </div>
-    <div class="image">
-        <figure class="auto_img"></figure>
     </div>
 </div>
 

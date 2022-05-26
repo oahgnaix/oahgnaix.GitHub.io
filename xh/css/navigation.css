@@ -1,6 +1,6 @@
 .nav_down {
   position: fixed;
-  bottom: 380px;
+  bottom: 420px;
   right: 50%;
   margin-right: -890px;
   width: 60px;
@@ -39,7 +39,7 @@
   right: 50%;
   margin-right: -890px;
   width: 60px;
-  height: 230px;
+  height: 270px;
   background: #031318;
   border: 1px solid #34f804;
   border-top: none;

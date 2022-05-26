@@ -102,10 +102,12 @@ h4 {
 
 .video, .image {
     margin-left: 28px;
-    margin-top: 56px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    border-bottom: 2px solid #4df107;
     float: left;
-    width: 678px;
-    height: 445px;
+    width: 1400px;
+    height: 788px;
 }
 
 .video > iframe {
