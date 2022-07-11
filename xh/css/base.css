@@ -1,0 +1,33 @@
+body {
+  font-family: '微软雅黑', Arial, monospace;
+  background-image: url("../img/bg.gif");
+  color: #fff;
+  box-sizing: border-box;
+  user-select: none;
+}
+a {
+  text-decoration: none !important;
+  color: #fff;
+}
+ul {
+  list-style-type: none;
+}
+.w {
+  width: 1440px;
+  margin: 0 auto;
+}
+.clearfix::before,
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+/*
+@total-width: 768px;
+
+// vw适配
+html {
+  // 设置rem的比值
+  font-size: (100vw/@total-width * 40);
+}*/
+/*# sourceMappingURL=base.css.map */

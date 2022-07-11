@@ -1,0 +1,28 @@
+@media screen {
+  @media (max-width: 768px) {
+    @total-width: 768px;
+
+    // vw适配
+    html {
+      // 设置rem的比值
+      font-size: (100vw/@total-width * 40);
+    }
+
+    .document-pdf {
+      height: 100vw;
+      iframe {
+
+      }
+    }
+
+    // 版权信息
+    .footer {
+      .copyright {
+        font-size: (18/40rem);
+      }
+      .copyright-info {
+        font-size: (16/40rem);
+      }
+    }
+  }
+}
